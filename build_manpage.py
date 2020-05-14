@@ -70,7 +70,7 @@ class build_manpage(Command):
         try:
             mod = __import__(mod_name, fromlist=fromlist)
             self._parser = getattr(mod, func_name)()
-        except ImportError, err:
+        except ImportError as err:
             raise
         self._parser.formatter = ManPageFormatter()
         self.announce('Writing man page %s' % self.output)
