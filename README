@@ -1,6 +1,8 @@
 Based on blog post https://andialbrecht.wordpress.com/2009/03/17/creating-a-man-page-with-distutils-and-optparse/
 Latest original version (2017) https://github.com/andialbrecht/build_manpage
 
+Should work on python3
+
 This version works with argparse instead of optparse like the original 
 and doesn't require a separate step to build/install the man page
 
