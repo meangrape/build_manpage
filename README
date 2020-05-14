@@ -3,8 +3,7 @@ Latest original version (2017) https://github.com/andialbrecht/build_manpage
 
 Should work on python3
 
-This version works with argparse instead of optparse like the original 
-and doesn't require a separate step to build/install the man page
+This version works with argparse instead of optparse like the original and doesn't require a separate step to build/install the man page
 
 Look at setup.cfg and setup.py to see what you need to add to those files.
 
