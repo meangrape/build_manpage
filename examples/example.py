@@ -1,3 +1,5 @@
+import argparse
+
 def get_parser():
     parser = argparse.ArgumentParser(prog='example', description='Manage EC2 example instances', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('-i', '--iam', type=str, metavar='IAMID', 
@@ -17,11 +19,9 @@ def get_parser():
     destroy_group.add_argument('-a', '--all', action='store_true', help='Delete all of your examples and resources')
     destroy_group.add_argument('-c', '--client', type=str, help='Delete all of your instances with this client name')
     destroy_group.add_argument('-t', '--tag', type=str, help='Unique resource tag to be deleted')
-    parser_destroy.set_defaults(func=destroy_example)
     
     parser_inventory = subparsers.add_parser('inventory', help='List examples you have running in AWS')
     parser_inventory.add_argument('-d', '--detailed', action='store_true', help='Provide additional EC2 specific information')
-    parser_inventory.set_defaults(func=inventory)
     
     parser_stop = subparsers.add_parser('stop', help='Stop running instances')
     parser_stop.add_argument('-f', '--force', action='store_true', help='Force shutdown', default=False)
@@ -29,10 +29,8 @@ def get_parser():
     stop_group.add_argument('-a', '--all', action='store_true', help='Stop (not terminate) all of your instances')
     stop_group.add_argument('-c', '--client', type=str, help='Stop (not terminate) all instances for this client')
     stop_group.add_argument('-t', '--tag', type=str, help='Unique resource tag to be stopped')
-    parser_stop.set_defaults(func=stop_example)
 
     parser_license = subparsers.add_parser('license', help="http://github.com/meangrape/build_manpage/LICENSE")
-    parser_license.set_defaults(func=license)
     return parser
 
 

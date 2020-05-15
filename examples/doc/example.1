@@ -1,0 +1,51 @@
+.TH example 1 2020\-05\-14
+.SH NAME
+example \- bauild_manpage example
+.SH SYNOPSIS
+.B example
+usage: [-h] [-i IAMID] [-v]
+               {create,destroy,inventory,stop,license} ...
+
+.SH DESCRIPTION
+Based on blog post https://andialbrecht.wordpress.com/2009/03/17/creating\-a\-man\-page\-with\-distutils\-and\-optparse/
+Latest original version (2017) https://github.com/andialbrecht/build_manpage
+
+Should work on python3
+
+This version works with argparse instead of optparse like the original and doesn't require a separate step to build/install the man page
+
+Look at setup.cfg and setup.py to see what you need to add to those files.
+
+It looks in setup.py to find information like authors &c. Look at build_manpage.py for details.
+
+
+.SH OPTIONS
+usage: example [-h] [-i IAMID] [-v]
+               {create,destroy,inventory,stop,license} ...
+
+Manage EC2 example instances
+
+positional arguments:
+  {create,destroy,inventory,stop,license}
+    create              Create a example group (instance, keypair, security
+                        group)
+    destroy             Destroy a example group and associated resources
+    inventory           List examples you have running in AWS
+    stop                Stop running instances
+    license             http://github.com/meangrape/build_manpage/LICENSE
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i IAMID, --iam IAMID
+                        Your IAM id. We attempt to read an IAM_ID environemnt
+                        variable and fallback to your username. This is the
+                        primary key used to identify AWS resources belonging
+                        to you (default: None)
+  -v, --version         show program's version number and exit
+.SH AUTHORS
+.B example
+was written by Jay Edwards <jay@meangrape.com>.
+.SH DISTRIBUTION
+The latest version of example may be downloaded from
+.UR UNKNOWN
+.UE
