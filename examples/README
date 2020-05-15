@@ -1,0 +1,2 @@
+Generate the example man page ./doc/example.1 with `setup.py build_manpage`
+Generate markdown version with `pandoc example.1 -o example.md`

@@ -16,7 +16,7 @@ setup(
     author_email='jay@meangrape.com',
     data_files=[('%s/share/man/man1' % sys.prefix, ['doc/example.1'])],
     license='Apache License 2.0',
-    description='bauild_manpage example',
+    description='build_manpage example',
     long_description=open('../README').read(),
     entry_points = {
         'console_scripts': [
