@@ -5,7 +5,6 @@ Works on python3
 
 This version works with argparse instead of optparse like the original and doesn't require a separate step to build/install the man page
 
-Look at setup.cfg and setup.py to see what you need to add to those files.
-
+Look at setup.cfg and setup.py in ./examples to see what you need to do to use this.
 It looks in setup.py to find information like authors &c. Look at build_manpage.py for details.
 
